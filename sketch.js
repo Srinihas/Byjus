@@ -53,49 +53,16 @@ function draw() {
     balloon = Math.round(random(1,4));
     if (balloon == 1) {
       redBalloon();
-    }
-    if (ballon == 2) {
+    } else if (balloon == 2) {
       pinkBalloon();
-    }
-    if (ballon == 3) {
+    } else if (balloon == 3) {
       blueBalloon();
-    }
-    if (ballon == 4) {
+    } else {
       greenBalloon();
     }
   }
-  
-  score1();
 
   drawSprites();
-}
-
-function score1() {
-  if (frameCount % 999999999999 == 0) {
-    score = 0;
-  }
-  if (arrow.x == red+25 && arrow.y == red.y) {
-    score = score+1;
-    arrow.x = 360;
-    red.x= 0;
-  }
-  if (arrow.x == blue+25 && arrow.y == blue.y) {
-    score = score+1;
-    arrow.x = 360;
-    blue.x= 0;
-  }
-  if (arrow.x == green+25 && arrow.y == green.y) {
-    score = score+1;
-    arrow.x = 360;
-    green.x= 0;
-  }
-  if (arrow.x == pink && arrow.y == pink.y) {
-    score = score+1;
-    arrow.x = 360;
-    pink.x= 0;
-  }
-  Text("SCORE : "+score, 380, 385);
-
 }
 
 // Creating  arrows for bow
